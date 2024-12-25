@@ -51,6 +51,10 @@ app.get("/api/search", (req, res) => {
   }
 });
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the API! Use /api/search or /api/scrape.");
+});
+
 // API: Trigger web scraping to update the database
 app.post("/api/scrape", async (req, res) => {
   try {
